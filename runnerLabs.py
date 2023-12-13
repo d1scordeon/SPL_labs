@@ -6,8 +6,9 @@ listOfLabs = ['1. Lab1', '2. Lab2', '3. Lab3', '4. Lab4', '6. Lab6 (Unit test)']
 mainFolder = 'C:\\Users\\parlethed\\PycharmProjects\\SPL_labs'
 
 
-print(*listOfLabs, sep="\n")  # sep="\n" will make the list print on new lines
+print(*listOfLabs, sep="\n")
 userInput = input("Choose the project: ")
+
 
 def open_project(user_input):
     if user_input in numbersOfLabs:
@@ -15,5 +16,6 @@ def open_project(user_input):
         subprocess.run([r'C:\Users\parlethed\AppData\Local\Programs\Python\Python311\python.exe', lab_path], check=True)
     else:
         print("Error: Invalid lab number")
+
 
 open_project(userInput)
