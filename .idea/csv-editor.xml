@@ -3,20 +3,6 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="C:\Users\parlethed\PycharmProjects\SPL_labs\lab7\lviv.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="C:\Users\parlethed\PycharmProjects\SPL_labs\lab7\table.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="C:\Users\parlethed\PycharmProjects\SPL_labs\lab8\weather.csv">
           <value>
             <Attribute>
