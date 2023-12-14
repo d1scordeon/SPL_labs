@@ -87,6 +87,3 @@ class CalculatorErrorTest(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-
-def run():
-    return None

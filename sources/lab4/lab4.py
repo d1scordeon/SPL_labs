@@ -86,9 +86,10 @@ class ASCIIArt:
         self.preview_art()
 
 
-running_prog = ASCIIArt()
-running_prog.run_art()
+def main():
+    running_prog = ASCIIArt()
+    running_prog.run_art()
 
 
-def run():
-    return None
+if __name__ == "__main__":
+    main()

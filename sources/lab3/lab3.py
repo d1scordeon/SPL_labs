@@ -94,9 +94,12 @@ class Settings_TextArt(TextArt):
         for line in self.art.splitlines():
             print(line.center(terminal_width))
 
-text_art_running = Settings_TextArt()
-text_art_running.running_text_to_art()
+
+def main():
+    text_art_running = Settings_TextArt()
+    text_art_running.running_text_to_art()
 
 
-def run():
-    return None
+if __name__ == "__main__":
+    main()
+

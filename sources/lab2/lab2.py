@@ -90,9 +90,11 @@ class AdvancedCalculator(Calculator):
                 print("Thank you for using the calculator. Goodbye!")
                 break
 
-calc = AdvancedCalculator()
-calc.running_calculation()
+
+def main():
+    calc = AdvancedCalculator()
+    calc.running_calculation()
 
 
-def run():
-    return None
+if __name__ == "__main__":
+    main()

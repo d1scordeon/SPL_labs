@@ -54,45 +54,49 @@ def calculator(x: float, y: float, choice: str):
         print("Square root: ", x, "=", sqrt(x, choice))
     if choice == '%':
         print(x, "%", y, "=", mod(x, choice, y))
- 
-print("Hello! Welcome to Calculator! Choose the option:")
 
-while True:
-    try:
-        x = float(input("Num 1 ="))
-        y = float(input("Num 2 ="))
-    except:
-        print("Invalid number")
-        exit()
-    
-    print("Choose the operation now!")
-    print(" 1.Add(+)\n 2.Substract(-)\n 3.Mutliply(*)\n 4.Divide(/)\n 5.Exponentiation(**)\n 6.Square root(sqrt)\n 7.Modulus(%)")
+def main():
+    print("Hello! Welcome to Calculator! Choose the option:")
 
-    choice = input("Your choice:")
-    
-    calculator(x,y,choice)
-    
-    next_calculation = input("Let's do next calculation? (yes/no): ")
-    
-    if next_calculation == "no":
-          print(result)
-    elif next_calculation == "yes":
-          continue
-    else:
-        print("Invalid Input.")
-        continue
-    
-    delete_history = input("Want to delete history?(yes or no): ")
-    
-    while delete_history != "yes" and delete_history != "no":
-        print("Invalid Input.")
+    while True:
+        try:
+            x = float(input("Num 1 ="))
+            y = float(input("Num 2 ="))
+        except:
+            print("Invalid number")
+            exit()
+
+        print("Choose the operation now!")
+        print(" 1.Add(+)\n 2.Substract(-)\n 3.Mutliply(*)\n 4.Divide(/)\n 5.Exponentiation(**)\n 6.Square root(sqrt)\n 7.Modulus(%)")
+
+        choice = input("Your choice:")
+
+        calculator(x,y,choice)
+
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+
+        if next_calculation == "no":
+              print(result)
+        elif next_calculation == "yes":
+              continue
+        else:
+            print("Invalid Input.")
+            continue
+
         delete_history = input("Want to delete history?(yes or no): ")
-    
-    if delete_history == "yes":
-        result.clear()
-        print("Your history was deleted.")
-        print(result)
-        break
-    else:
-        break
 
+        while delete_history != "yes" and delete_history != "no":
+            print("Invalid Input.")
+            delete_history = input("Want to delete history?(yes or no): ")
+
+        if delete_history == "yes":
+            result.clear()
+            print("Your history was deleted.")
+            print(result)
+            break
+        else:
+            break
+
+
+if __name__ == "__main__":
+    main()
