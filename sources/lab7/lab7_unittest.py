@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import Mock, patch
 
-from lab7.app import WeatherCommand
+from sources.lab7.lab7 import WeatherCommand
 
 
 class TestWeatherCommand(unittest.TestCase):
@@ -18,10 +18,8 @@ class TestWeatherCommand(unittest.TestCase):
         mock_response.json.return_value = {'current': {'temp_c': 25, 'condition': {'text': 'Sunny'}}}
         mock_requests_get.return_value = mock_response
 
-        # Create an instance of WeatherCommand
         weather_command = WeatherCommand(self.api_key, self.base_url, self.city)
 
-        # Call the execute method
         result = weather_command.execute()
 
         # Assertions
@@ -31,15 +29,13 @@ class TestWeatherCommand(unittest.TestCase):
 
     @patch('lab7.app.requests.get')
     def test_execute_unsuccessful_request(self, mock_requests_get):
-        # Mock the requests.get method to return an unsuccessful response
+
         mock_response = Mock()
         mock_response.status_code = 404
         mock_requests_get.return_value = mock_response
 
-        # Create an instance of WeatherCommand
         weather_command = WeatherCommand(self.api_key, self.base_url, self.city)
 
-        # Call the execute method
         result = weather_command.execute()
 
         # Assertions

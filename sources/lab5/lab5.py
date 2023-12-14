@@ -31,7 +31,7 @@ class Cube:
 
         t = v = h = int(self.size / 2) # top, vertical, horizontal, ініціалізація змінних
         s, p, b, f, n = " ", cube_color + "+", cube_color + "|", cube_color + "/", "\n" # s - space, p - plus, b - bar, f - forward slash, n - new line,
-                                        # символьні змінні для відображення куба
+                                                                                        # символьні змінні для відображення куба
         l = p + (cube_color + "-") * (t * 4) + p # l - line, t - top, контур верхньої межі куба
         S = s * (4 * t) # S - space, верхня частина куба
         k = s * h # k - space, вертикальна частина куба
@@ -87,7 +87,7 @@ class CommandLineInterface:
             if command == "exit":
                 sys.exit(0)
             elif command == "create":
-                self.create_cube()  # Assuming we only create cubes for now
+                self.create_cube()
             elif command == "render":
                 self.scene.render_scene()
             elif command == "cube":
@@ -164,3 +164,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

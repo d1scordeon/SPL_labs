@@ -92,3 +92,7 @@ class AdvancedCalculator(Calculator):
 
 calc = AdvancedCalculator()
 calc.running_calculation()
+
+
+def run():
+    return None

@@ -96,3 +96,7 @@ class Settings_TextArt(TextArt):
 
 text_art_running = Settings_TextArt()
 text_art_running.running_text_to_art()
+
+
+def run():
+    return None

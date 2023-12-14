@@ -88,3 +88,7 @@ class ASCIIArt:
 
 running_prog = ASCIIArt()
 running_prog.run_art()
+
+
+def run():
+    return None

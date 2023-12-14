@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 import requests
 from tabulate import tabulate
 import json
-from datetime import datetime
 import csv
 
 
@@ -29,7 +28,7 @@ class WeatherCommand(Command):
         print(f"Status Code: {response.status_code}")
 
         try:
-            response.raise_for_status()  # Raise an HTTPError for bad responses
+            response.raise_for_status()
             data = response.json()
             print(f"Response Data: {data}")
             return data
@@ -100,7 +99,7 @@ class WeatherApp:
                     txt_file.write(f"{entry['city']}: {entry['temperature']}°C, {entry['description']}\n")
         elif file_format == 'csv':
             with open(filename, 'w', newline='') as csv_file:
-                headers = list(self.history[0].keys()) if self.history else []  # Use keys from the first entry
+                headers = list(self.history[0].keys()) if self.history else []
                 writer = csv.DictWriter(csv_file, fieldnames=headers)
                 writer.writeheader()
                 writer.writerows(self.history)
@@ -142,3 +141,4 @@ if __name__ == '__main__':
 
             if weather_data is not None:
                 weather_app.display_table(weather_data)
+
